@@ -7,7 +7,7 @@ class MyBot extends ActivityHandler {
     constructor() {
         super();
         // See https://aka.ms/about-bot-activity-message to learn more about the message and other activity types.
-        this.onMessage(async turnContext => { console.log('this gets called'); await turnContext.sendActivity(`You said '${ turnContext.activity.text }'`); });
+        this.onMessage(async turnContext => { console.log('this gets called'); await turnContext.sendActivity(`You said something interesting my dear!: '${ turnContext.activity.text }'`); });
         this.onConversationUpdate(async turnContext => { console.log('this gets called (conversatgion update'); await turnContext.sendActivity('[conversationUpdate event detected]'); });
     }
 }
